@@ -13,3 +13,27 @@ jobs:
         uses: aquasecurity/tfsec-pr-commenter-action@v1.2.0
         with:
           github_token: ${{ github.token }}
+  tfplan:
+    name: Terraform Plan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: hashicorp/setup-terraform@v2
+        with:
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+        - run: terraform init
+          working-directory: terraform
+        - id: plan
+          working-directory: terraform
+          run: |
+            body = "$(terraform plan)"
+            body="${body//'%'/'%25'}"
+            body="${body//$'\n'/'%0A'}"
+            body="${body//$'\r'/'%0D'}" 
+            echo "::set-output name=body::$body"
+
+        - name: Create comment
+          uses: peter-evans/create-or-update-comment@v2
+          with:
+            issue-number: ${{ github.event.pull_request.number }}
+            body: ${{ steps.plan.outputs.body }}
+
