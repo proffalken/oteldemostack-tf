@@ -8,3 +8,7 @@ Source: https://github.com/proffalken/oteldemostack-tf
 # Files: src/*
 # Copyright: $YEAR $NAME <$CONTACT>
 # License: ...
+
+Files: poetry.lock pyproject.yaml .github/*
+Copyright: 2022 Matthew Macdonald-Wallace <matt@doics.co>
+License: MIT-Modern-Variant
