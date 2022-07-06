@@ -9,6 +9,6 @@ Source: https://github.com/proffalken/oteldemostack-tf
 # Copyright: $YEAR $NAME <$CONTACT>
 # License: ...
 
-Files: poetry.lock pyproject.yaml .github/*
+Files: poetry.lock pyproject.yaml .github/* terraform/*
 Copyright: 2022 Matthew Macdonald-Wallace <matt@doics.co>
 License: MIT-Modern-Variant
