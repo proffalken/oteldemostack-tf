@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: oteldemostack-tf
+  description: |
+    A rapidly deployable demo stack using multiple technologies to send metrics to Grafana Cloud
+  annotations:
+    github.com/project-slug: proffalken/oteldemostack-tf
+spec:
+  type: library
+  owner: Proffalken
+  lifecycle: development
