@@ -5,6 +5,10 @@ on:
     branches:
       - main
   pull_request:
+env:
+  TF_VAR_github_client_id: ${{ secrets.TF_VAR_GITHUB_CLIENT_ID }}
+  TF_VAR_github_client_secret: ${{ secrets.TF_VAR_GITHUB_CLIENT_SECRET }}
+  TF_VAR_github_pat: ${{ secrets.TF_VAR_GITHUB_PAT }}
 
 jobs:
   terraform:
