@@ -19,4 +19,5 @@ module "heroku_backstage" {
   github_client_id         = var.github_client_id
   github_client_secret     = var.github_client_secret
   github_pat               = var.github_pat
+  github_discovery_target  = var.github_discovery_target
 }
