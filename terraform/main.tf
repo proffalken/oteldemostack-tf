@@ -16,4 +16,7 @@ module "heroku_backstage" {
   backstage_region         = "eu"
   prometheus_uri           = module.grafana_cloud.prometheus_remote_endpoint
   prometheus_user          = module.grafana_cloud.prometheus_user_id
+  github_client_id         = var.github_client_id
+  github_client_secret     = var.github_client_secret
+  github_pat               = var.github_pat
 }
