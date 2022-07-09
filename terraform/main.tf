@@ -14,7 +14,7 @@ module "heroku_backstage" {
   backstage_version_number = var.backstage_version_number
   backstage_app_name       = "backstage-otel-demo"
   backstage_region         = "eu"
-  prometheus_uri           = module.grafana_cloud.prometheus_remote_endpoint
+  prometheus_uri           = "prometheus-prod-01-eu-west-0.grafana.net/api/prom"
   prometheus_user          = module.grafana_cloud.prometheus_user_id
   prometheus_viewer_token  = module.grafana_cloud.metrics_publisher_api_key
   github_client_id         = var.github_client_id
