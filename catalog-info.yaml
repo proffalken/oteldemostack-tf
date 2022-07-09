@@ -16,3 +16,4 @@ spec:
   lifecycle: development
   consumesApis:
     - terraform-grafana-oteldemostack
+    - terraform-heroku-oteldemostack-backstage
