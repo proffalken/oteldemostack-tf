@@ -1,5 +1,5 @@
 module "grafana_cloud" {
-  source = "github.com/proffalken/terraform-grafana-oteldemostack"
+  source = "github.com/proffalkens-demo-stack/terraform-grafana-oteldemostack"
 
   grafana_cloud_api_key = var.grafana_cloud_api_key
   grafana_stack_name    = "oteldemostack"
@@ -7,7 +7,7 @@ module "grafana_cloud" {
 }
 
 module "heroku_backstage" {
-  source = "github.com/proffalken/terraform-heroku-oteldemostack-backstage"
+  source = "github.com/proffalkens-demo-stack/terraform-heroku-oteldemostack-backstage"
 
   heroku_account_email     = var.heroku_account_email
   heroku_api_key           = var.heroku_api_key
