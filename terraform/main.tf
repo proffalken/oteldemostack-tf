@@ -23,6 +23,7 @@ module "heroku_backstage" {
   github_discovery_target  = var.github_discovery_target
 }
 
+/*
 module "google_cloud" {
   source = "github.com/proffalkens-demo-stack/terraform-google-oteldemostack"
-}
+}*/
